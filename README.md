@@ -53,3 +53,11 @@ Xử lý các string thì cần đến:
     lstrip() và rstrip() để loại các dấu tab
     replace("\n", "") để loại bỏ các dấu xuống dòng
     split("\n") để tách 1 string thành các string với delimiter là dấu \n
+
+---
+Sau khi đã craw xong:
+cần làm thao tác làm sạch bước cuối với các trình soạn thảo dễ dùng hơn, cụ thể là Excel - Power Query
+- làm sạch đường dẫn ảnh profile, chỉ giữ lại link ảnh (file .jpg)
+- nếu data nào ko có ảnh thì để trống, không để khung ảnh giữ chổ (file .gif)
+- làm sạch (Transform > Trim, hoặc Capitalize, hoặc Upper case) các cột chữ (Tên, Địa chỉ, Công ty)
+và cuối cùng là xuất trở về dạng csv để gửi cho client cho gọn gàng.

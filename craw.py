@@ -13,6 +13,7 @@ maximum_row = 1000000
 # Tạo List các request theo các ký tự từ a..z
 # Ký tự cuối cùng sẽ là từ a..z trong mã ASCII
 list_link =[]
+
 for letter in range(97, 123):
     list_link.append(link_base.format(chr(letter), maximum_row))
 
@@ -27,6 +28,7 @@ file_result = open(file_name, "w")
 header_result = "link_profile,name,description,company,address,phone_contact,email_contact,picture_profile,\n"
 file_result.write(header_result)
 
+count=0
 for i in range (len(list_link)):
     print(f"craw Agent by Lastname - letter: ", chr(97+i).title())
     # Phân tích cú pháp và bóc tách data
@@ -43,6 +45,7 @@ for i in range (len(list_link)):
     # Duyệt qua từng dòng dữ liệu trong nhóm A
     # Loại bỏ dòng đầu tiên (dòng tiêu đề bảng)
     for row in data_tr[1:]:
+        count += 1
         data_td_list = row.find_all("td")
         # Thứ tự trong các td
         # agentPhoto >> agentName >> Address >> Contact
@@ -76,7 +79,7 @@ for i in range (len(list_link)):
 
         # Lưu kết quả ra file .csv
         file_result.write(str1)
-        print(f"\t- {name1.title()}.")
+        print(f"{count:6d} - {name1.title()}.")
 
 # Đóng file kết quả lại
 file_result.close()

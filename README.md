@@ -1,8 +1,8 @@
-# Craw-Lbar.com-Agents
+# crawl-Lbar.com-Agents
  Video hướng dẫn gốc: youtube.com/watch?v=NUF_Av4mJgM
  Thực hiện biên soạn lại code: Trọng, Phạm - (84) 0349816784
 
- Website cần craw: https://www.lbar.com/agents/
+ Website cần crawl: https://www.lbar.com/agents/
  (menu: CONSUMERS > Find a REALTER)
 
  Sử dụng trình duyệt Chrome để tìm hiểu cấu trúc HTML của web
@@ -55,7 +55,7 @@ Xử lý các string thì cần đến:
     split("\n") để tách 1 string thành các string với delimiter là dấu \n
 
 ---
-Sau khi đã craw xong:
+Sau khi đã crawl xong:
 cần làm thao tác làm sạch bước cuối với các trình soạn thảo dễ dùng hơn, cụ thể là Excel - Power Query
 - làm sạch đường dẫn ảnh profile, chỉ giữ lại link ảnh (file .jpg)
 - nếu data nào ko có ảnh thì để trống, không để khung ảnh giữ chổ (file .gif)

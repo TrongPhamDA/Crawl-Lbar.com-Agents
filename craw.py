@@ -21,8 +21,8 @@ for letter in range(97, 123):
 fake_chrome_header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36'}
 
 # Mở file ghi ở chế độ ghi đề
-# Lưu ý nếu thao tác craw vừa rồi bị ngắt quãng thì cần backup lại kết quả đó
-file_name = "result_craw.csv"
+# Lưu ý nếu thao tác crawl vừa rồi bị ngắt quãng thì cần backup lại kết quả đó
+file_name = "result_crawl.csv"
 file_result = open(file_name, "w")
 # Ghi tiêu đề cột vào file csv ở đầu đầu tiên
 header_result = "link_profile,name,description,company,address,phone_contact,email_contact,picture_profile,\n"
@@ -30,7 +30,7 @@ file_result.write(header_result)
 
 count=0
 for i in range (len(list_link)):
-    print(f"craw Agent by Lastname - letter: ", chr(97+i).title())
+    print(f"crawl Agent by Lastname - letter: ", chr(97+i).title())
     # Phân tích cú pháp và bóc tách data
     link = list_link[i]
     response = requests.get(link, headers=fake_chrome_header)

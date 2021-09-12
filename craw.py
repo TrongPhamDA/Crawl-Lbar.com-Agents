@@ -24,7 +24,7 @@ fake_chrome_header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_1
 file_name = "result_craw.csv"
 file_result = open(file_name, "w")
 # Ghi tiêu đề cột vào file csv ở đầu đầu tiên
-header_result = "picture_profile,link_profile,name,description,company,address,phone_contact,email_contact,\n"
+header_result = "link_profile,name,description,company,address,phone_contact,email_contact,picture_profile,\n"
 file_result.write(header_result)
 
 for i in range (len(list_link)):
